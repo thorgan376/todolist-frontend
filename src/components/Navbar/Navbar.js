@@ -5,7 +5,7 @@ import {
 
 export default function Navbar() {
     return (
-        <ul className="basis-1/5 bg-red-900">
+        <ul className="basis-1/5 bg-zinc-50">
             <li>
                 <Link to="/about">About</Link>
             </li>
@@ -18,8 +18,7 @@ export default function Navbar() {
             <li>
                 <Link to="/filtersandlabel">Filters And Label</Link>
             </li>
-        </ul>
-
+        </ul>        
     )
 }
 export function About(){

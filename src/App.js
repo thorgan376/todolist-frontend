@@ -15,7 +15,7 @@ function App() {
       <Router>
       <PrimarySearchAppBar/>
       <Navbar/>
-      <div className=' basis-4/5 bg-green-900 h-screen'>
+      <div className='basis-4/5 bg-white h-screen'>
       <Routes>
         <Route path='/about'element={<About/>}/>
         <Route path='/'element={<Today/>}/>
