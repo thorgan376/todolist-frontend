@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import PrimarySearchAppBar from './components/Header/Header';
+import Header from './components/Header/Header';
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,9 +13,9 @@ function App() {
   return (
     <div className="flex flex-wrap">
       <Router>
-      <PrimarySearchAppBar/>
+      <Header/>
       <Navbar/>
-      <div className=' basis-4/5 bg-green-900 h-screen'>
+      <div className='relative mt-12 basis-4/5 bg-white h-screen'>
       <Routes>
         <Route path='/about'element={<About/>}/>
         <Route path='/'element={<Today/>}/>

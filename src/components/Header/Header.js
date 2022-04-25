@@ -32,7 +32,7 @@ const Search = styled('div')(({ theme }) => ({
   width: '100%',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(0.75),
-    width: '30ch',
+    width: '50ch',
   },
 }));
 
@@ -55,12 +55,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('md')]: {
-      width: '20ch',
+      width: '40ch',
     },
   },
 }));
 
-export default function PrimarySearchAppBar() {
+export default function Header() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -173,7 +173,7 @@ export default function PrimarySearchAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }} className="basis-full">
-      <AppBar position="static" elevation={0} sx={{ bgcolor: "#DB4C3F" }}>
+      <AppBar position="fixed" elevation={0} sx={{ bgcolor: "#DB4C3F" }}>
         <Toolbar style={toolBarStyle}>
           <IconButton
             size="large"
