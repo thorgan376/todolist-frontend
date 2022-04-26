@@ -7,26 +7,45 @@ import {
     Link
 } from "react-router-dom";
 
-const IconList = {
-    color: "#246fe0",
-    size: "medium",
-  };
+const IconInList = {
+    marginRight: '0.5rem',
+}
 
-export default function Navbar() {
+export default function MenuList() {
     return (
         <div className="mt-12 basis-1/5 h-screen">
         <ul className="fixed bg-zinc-50 h-screen w-1/5 pl-12 pt-8">
             <li>
-                <span><Link to="/about"><MailOutlineIcon style={IconList}/> About</Link></span>
+                <span>
+                    <Link to="/about">
+                        <span className="text-[#14aaf5]" style={IconInList}><MailOutlineIcon/></span>
+                        About
+                    </Link>
+                </span>
             </li>
             <li>
-                <span><Link to="/"><CalendarMonthIcon style={IconList}/>Today</Link></span>
+                <span>
+                    <Link to="/">
+                        <span className="text-[#299438]" style={IconInList}><CalendarMonthIcon/></span>
+                        Today
+                    </Link>
+                </span>
             </li>
             <li>
-                <span><Link to="/upcoming"><CalculateIcon style={IconList}/>Upcoming</Link></span>
+                <span>
+                    <Link to="/upcoming">
+                        <span className="text-[#af38eb]" style={IconInList}><CalculateIcon/></span>
+                        Upcoming
+                    </Link>
+                </span>
             </li>
             <li>
-                <span><Link to="/filtersandlabel"><GridViewIcon style={IconList}/>Filters And Label</Link></span>
+                <span>
+                    <Link to="/filtersandlabel">
+                        <span className="text-[#ff9933]" style={IconInList}><GridViewIcon/></span>
+                        Filters And Label
+                    </Link>
+                </span>
             </li>
         </ul>
         </div>
