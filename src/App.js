@@ -9,20 +9,32 @@ import {
 } from "react-router-dom";
 import {About, Today, Upcoming, Filtersandlabel} from './components/Navbar/MenuList';
 
+import { useEffect} from 'react';
+
+import axios from 'axios';
+
 function App() {
+
+  useEffect( () => {
+    const resp = (async() => {
+      const data = await axios.get('http://localhost:8080');
+      console.log(data);
+    })
+    resp();
+  },[])
   return (
     <div className="flex flex-wrap">
       <Router>
-      <Header/>
-      <MenuList/>
-      <div className='relative mt-12 basis-4/5 bg-white h-screen'>
-      <Routes>
-        <Route path='/about'element={<About/>}/>
-        <Route path='/'element={<Today/>}/>
-        <Route path='/upcoming'element={<Upcoming/>}/>
-        <Route path='/filtersandlabel'element={<Filtersandlabel/>}/>
-      </Routes>
-      </div>
+        <Header/>
+        <MenuList/>
+        <div className='relative mt-12 basis-4/5 bg-white h-screen'>
+        <Routes>
+          <Route path='/about'element={<About/>}/>
+          <Route path='/'element={<Today/>}/>
+          <Route path='/upcoming'element={<Upcoming/>}/>
+          <Route path='/filtersandlabel'element={<Filtersandlabel/>}/>
+        </Routes>
+        </div>
       </Router>
     </div>
   );
