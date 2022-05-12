@@ -3,9 +3,9 @@ import GridViewIcon from '@mui/icons-material/GridView';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import CalculateIcon from '@mui/icons-material/Calculate';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import {
-    Link
-} from "react-router-dom";
+import {Link} from "react-router-dom";
+import Edit from "../Content/Edit";
+import MainContent from "../Content/MainContent";
 
 const IconInList = {
     marginRight: '0.5rem',
@@ -13,41 +13,41 @@ const IconInList = {
 
 export default function MenuList() {
     return (
-        <div className="mt-12 basis-1/5 h-screen">
-        <ul className="fixed bg-zinc-50 h-screen w-1/5 pl-12 pt-8">
-            <li>
-                <span>
-                    <Link to="/about">
-                        <span className="text-[#14aaf5]" style={IconInList}><MailOutlineIcon/></span>
-                        About
-                    </Link>
-                </span>
-            </li>
-            <li>
-                <span>
-                    <Link to="/">
-                        <span className="text-[#299438]" style={IconInList}><CalendarMonthIcon/></span>
-                        Today
-                    </Link>
-                </span>
-            </li>
-            <li>
-                <span>
-                    <Link to="/upcoming">
-                        <span className="text-[#af38eb]" style={IconInList}><CalculateIcon/></span>
-                        Upcoming
-                    </Link>
-                </span>
-            </li>
-            <li>
-                <span>
-                    <Link to="/filtersandlabel">
-                        <span className="text-[#ff9933]" style={IconInList}><GridViewIcon/></span>
-                        Filters And Label
-                    </Link>
-                </span>
-            </li>
-        </ul>
+        <div className="mt-12 w-[305px] h-screen">
+            <ul className="fixed bg-zinc-50 h-screen w-1/5 pl-12 pt-8">
+                <li>
+                    <span>
+                        <Link to="/about">
+                            <span className="text-[#14aaf5]" style={IconInList}><MailOutlineIcon/></span>
+                            About
+                        </Link>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <Link to="/">
+                            <span className="text-[#299438]" style={IconInList}><CalendarMonthIcon/></span>
+                            Today
+                        </Link>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <Link to="/upcoming">
+                            <span className="text-[#af38eb]" style={IconInList}><CalculateIcon/></span>
+                            Upcoming
+                        </Link>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <Link to="/filtersandlabel">
+                            <span className="text-[#ff9933]" style={IconInList}><GridViewIcon/></span>
+                            Filters And Label
+                        </Link>
+                    </span>
+                </li>
+            </ul>
         </div>
     )
 }
@@ -70,8 +70,9 @@ Amet aliquam id diam maecenas ultricies mi eget. Ornare suspendisse sed nisi lac
 }
 export function Today(){
     return(
-        <div>
-            <h1>Today here</h1>
+        <div className="flex justify-center h-screen">
+            <MainContent/>
+            <Edit/>
         </div>
     )
 }

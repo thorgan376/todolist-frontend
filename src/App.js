@@ -8,9 +8,7 @@ import {
   Route,
 } from "react-router-dom";
 import {About, Today, Upcoming, Filtersandlabel} from './components/Navbar/MenuList';
-
 import { useEffect} from 'react';
-
 import axios from 'axios';
 
 function App() {
@@ -27,7 +25,7 @@ function App() {
       <Router>
         <Header/>
         <MenuList/>
-        <div className='relative mt-12 basis-4/5 bg-white h-screen'>
+        <div className='relative mt-12 basis-[79.924%] bg-white h-screen top-0'>
         <Routes>
           <Route path='/about'element={<About/>}/>
           <Route path='/'element={<Today/>}/>
