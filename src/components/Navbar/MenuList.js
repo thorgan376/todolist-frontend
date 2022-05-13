@@ -4,7 +4,7 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import CalculateIcon from '@mui/icons-material/Calculate';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import {Link} from "react-router-dom";
-import Edit from "../Content/Edit";
+import Edit from "../Content/Form";
 import MainContent from "../Content/MainContent";
 
 const IconInList = {

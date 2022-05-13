@@ -1,9 +1,10 @@
 .agenda_view{
     height: 100vh;
-    background-color: rgb(14 165 233);
+    /* background-color: rgb(216, 198, 198); */
     flex-direction: column;
     flex-grow: 1;
     padding-bottom: 84px;
+    
 }
 /* .editor{
     width: 26%;
@@ -55,7 +56,6 @@
 }
 body {
   /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
-  color: black;
   font-size: 14px;
   font-weight: 350;
 }
@@ -63,8 +63,12 @@ body {
 form {
   min-height: 20vh;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
+  padding: 0 55px;
+  max-width: 910px;
+  margin: 0 auto;
+    
 } */
 form input,
 form button {
@@ -74,19 +78,41 @@ form button {
   background: white;
 }
 form button {
-  color: #ff6f47;
-  background: #f7fffe;
+  color: white;
+  background: #DB4C3F;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all ease;
 }
 form button:hover {
-  background: #ff6f47;
-  color: white;
+  background: white;
+  color: #DB4C3F;
+  border-radius: 4px;
+  opacity: 100%;
 }
 .todo-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.todo-input{
+    padding: 0.9rem;
+    margin-right: 2px;
+    border: 2px solid #DB4C3F;
+    border-radius: 4px;
+    width: 55%;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.todo-button{
+    padding: 1rem;
+    background-color: white;
+    border-radius: 4px;
+    color: #DB4C3F;
+    opacity: 50%;
 }
 
 .todo-list {
@@ -113,7 +139,7 @@ form button:hover {
 
 .trash-btn,
 .complete-btn {
-  background: #ff6f47;
+  background: #DB4C3F;
   color: white;
   border: none;
   padding: 1rem;
@@ -159,9 +185,10 @@ select {
   margin: 1rem;
   position: relative;
   overflow: hidden;
+  color: white;
 }
 select {
-  color: #ff6f47;
+  color: #DB4C3F;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   width: 12rem;
@@ -173,7 +200,7 @@ select {
   top: 0;
   right: 0;
   padding: 1rem;
-  background: #ff6f47;
+  background: #DB4C3F;
   cursor: pointer;
   pointer-events: none;
 }

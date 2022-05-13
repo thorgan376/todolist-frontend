@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import data from "./data.json";
 // data.todoist: chỉ import đúng một cái,
 // data: import hết những thứ trong file json
-import Edit from './Edit';
+import Form from './Form';
 import './Content.css';
 
 function MainContent() {
@@ -21,7 +21,7 @@ function MainContent() {
                     </h1>
                 </div>
             </header>
-
+            <Form/>
         </div>
       );
     }
