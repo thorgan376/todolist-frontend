@@ -8,7 +8,6 @@ import './Content.css';
 function MainContent() {
     const [tasks, setTasks] = useState(0);
     const [selectedTask, setSelectedTask] = useState(0);
-
     const addTask = (task) => {
         setTasks([...tasks, task]);
     }
@@ -18,7 +17,7 @@ function MainContent() {
                 <div className='view_header__content'>
                     <h1>
                       <span className='simple_title_today'>Today</span>
-                      <small className='simple_title_date'>Thu 12 May</small>
+                      <small className='simple_title_date'>{new Date().toDateString() + ''}</small>
                     </h1>
                 </div>
             </header>

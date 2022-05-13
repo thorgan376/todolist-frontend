@@ -40,7 +40,8 @@
     outline-color: rgb(32, 32, 32);
 }
 .simple_title_date{
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: 500;
     line-height: 25px;
     margin-left: 6px;
     outline-color: rgb(128, 128, 128);
