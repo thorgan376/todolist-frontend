@@ -10,7 +10,6 @@ function Edit(props) {
 
     return(//TH2: trường hợp này ko có id = thêm task mới
         <div className= "editor">
-            <h1></h1>
         </div>
     )
 

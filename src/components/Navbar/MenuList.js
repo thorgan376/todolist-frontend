@@ -70,9 +70,8 @@ Amet aliquam id diam maecenas ultricies mi eget. Ornare suspendisse sed nisi lac
 }
 export function Today(){
     return(
-        <div className="flex justify-center h-screen">
+        <div className="fixed justify-center w-[79.924%]">
             <MainContent/>
-            <Edit/>
         </div>
     )
 }

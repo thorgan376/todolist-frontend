@@ -25,7 +25,7 @@ function App() {
       <Router>
         <Header/>
         <MenuList/>
-        <div className='relative mt-12 basis-[79.924%] bg-white h-screen top-0'>
+        <div className='relative mt-12 w-[79.924%]'>
         <Routes>
           <Route path='/about'element={<About/>}/>
           <Route path='/'element={<Today/>}/>
