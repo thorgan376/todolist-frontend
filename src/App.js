@@ -25,7 +25,7 @@ function App() {
       <Router>
         <Header/>
         <MenuList/>
-        <div className='relative mt-12 w-[79.924%]'>
+        <div className='relative mt-12 w-[calc(100%-305px)]'>
         <Routes>
           <Route path='/about'element={<About/>}/>
           <Route path='/'element={<Today/>}/>

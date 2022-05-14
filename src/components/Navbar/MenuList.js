@@ -14,7 +14,7 @@ const IconInList = {
 export default function MenuList() {
     return (
         <div className="mt-12 w-[305px] h-screen">
-            <ul className="fixed bg-zinc-50 h-screen w-1/5 pl-12 pt-8">
+            <ul className="fixed bg-zinc-50 h-screen w-[305px] pl-12 pt-8">
                 <li>
                     <span>
                         <Link to="/about">
@@ -70,7 +70,7 @@ Amet aliquam id diam maecenas ultricies mi eget. Ornare suspendisse sed nisi lac
 }
 export function Today(){
     return(
-        <div className="fixed justify-center w-[79.924%]">
+        <div className="relative justify-center">
             <MainContent/>
         </div>
     )
