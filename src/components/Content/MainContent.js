@@ -3,6 +3,7 @@ import data from "./data.json";
 // data.todoist: chỉ import đúng một cái,
 // data: import hết những thứ trong file json
 import Form from './Form';
+import TodoList from './TodoList';
 import './Content.css';
 
 function MainContent() {
@@ -22,6 +23,7 @@ function MainContent() {
                 </div>
             </header>
             <Form/>
+            <TodoList/>
             <h1>Labore et dolore magna aliqua. Leo in vitae turpis massa sed elementum tempus. Mi proin sed libero enim sed. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Tempor commodo ullamcorper a lacus vestibulum sed arcu non. Ut tristique et egestas quis. Cursus eget nunc scelerisque viverra mauris in aliquam. Mollis nunc sed id semper risus. Dignissim sodales ut eu sem integer vitae justo. Nisl purus in mollis nunc sed id semper. Proin fermentum leo vel orci porta. Mi proin sed libero enim. Sagittis orci a scelerisque purus. Facilisi etiam dignissim diam quis enim lobortis scelerisque. Consequat nisl vel pretium lectus quam id. Maecenas pharetra convallis posuere morbi.
 
 Ut eu sem integer vitae justo eget. Sed elementum tempus egestas sed sed risus pretium. Quam viverra orci sagittis eu volutpat. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Amet cursus sit amet dictum. Pulvinar neque laoreet suspendisse interdum consectetur libero id. Arcu non sodales neque sodales ut etiam. Tortor posuere ac ut consequat semper viverra nam. Nec tincidunt praesent semper feugiat nibh sed. Gravida quis blandit turpis cursus. In arcu cursus euismod quis viverra nibh cras. Condimentum id venenatis a condimentum vitae sapien pellentesque. Id consectetur purus ut faucibus pulvinar elementum. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Euismod nisi porta lorem mollis aliquam ut porttitor. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Aliquam id diam maecenas ultricies mi eget mauris. Nisl purus in mollis nunc sed id. Et tortor at risus viverra adipiscing at in tellus integer.
