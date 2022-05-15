@@ -5,13 +5,20 @@ import data from "./data.json";
 import MainContent from './MainContent';
 import './Content.css'
 
-const Form = () => {
-    const [title, setTitle] = useState();
+const Form = ({setInputText, setTasks, tasks}) => {
+    //Javascript Code And Function here
+    const textHandler = (e) => {
+        console.log(e.target.value);
+        setInputText(e.target.value);
+    }
+    const submitTaskHandler = (event) => {
+        event.preventDefault();
+    }
 
     return(
         <form>
-            <input type="text" className="todo-input" />
-                <button className="todo-button" type="submit">
+            <input onChange={textHandler} type="text" className="todo-input" />
+                <button onClick={submitTaskHandler} className="todo-button" type="submit">
                 <i className="fas fa-plus-square"></i> Add Task
                 </button>
             <div className="select">
@@ -23,7 +30,6 @@ const Form = () => {
             </div>
         </form>
     )
-
 }
 
 export default Form;
