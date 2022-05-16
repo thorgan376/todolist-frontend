@@ -5,20 +5,23 @@ import data from "./data.json";
 import MainContent from './MainContent';
 import './Content.css'
 
-const Form = ({setInputText, setTasks, tasks}) => {
+const Form = ({inputTodo, setInputTodo, setTodos, todos}) => {
     //Javascript Code And Function here
     const textHandler = (e) => {
         console.log(e.target.value);
-        setInputText(e.target.value);
+        setInputTodo(e.target.value);
     }
-    const submitTaskHandler = (event) => {
+    const submitTodoHandler = (event) => {
         event.preventDefault();
+        setTodos([...todos, {text:inputTodo, completed: false, id: Math.random()}]
+            );
+        setInputTodo("");
     }
 
     return(
         <form>
-            <input onChange={textHandler} type="text" className="todo-input" />
-                <button onClick={submitTaskHandler} className="todo-button" type="submit">
+            <input value={inputTodo} onChange={textHandler} type="text" className="todo-input" />
+                <button onClick={submitTodoHandler} className="todo-button" type="submit">
                 <i className="fas fa-plus-square"></i> Add Task
                 </button>
             <div className="select">

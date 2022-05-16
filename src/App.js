@@ -9,17 +9,17 @@ import {
 } from "react-router-dom";
 import {About, Today, Upcoming, Filtersandlabel} from './components/Navbar/MenuList';
 import { useEffect} from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 function App() {
 
-  useEffect( () => {
-    const resp = (async() => {
-      const data = await axios.get('http://localhost:8080');
-      console.log(data);
-    })
-    resp();
-  },[])
+  // useEffect( () => {
+  //   const resp = (async() => {
+  //     const data = await axios.get('http://localhost:8080');
+  //     console.log(data);
+  //   })
+  //   resp();
+  // },[])
   return (
     <div className="flex flex-wrap">
       <Router>
