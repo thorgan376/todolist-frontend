@@ -9,6 +9,7 @@ import './Content.css';
 function MainContent() {
     const [inputTodo, setInputTodo] = useState("");
     const [todos, setTodos] = useState([]);
+    const [status, setStatus] = useState("All");
     // const addTodo = (todo) => {
     //     setTodos([...todos, todo]);
     // }
