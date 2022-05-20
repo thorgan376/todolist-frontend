@@ -70,7 +70,7 @@ Amet aliquam id diam maecenas ultricies mi eget. Ornare suspendisse sed nisi lac
 }
 export function Today(){
     return(
-        <div className="relative justify-center">
+        <div className="sticky top-[48px] justify-center">
             <MainContent/>
         </div>
     )

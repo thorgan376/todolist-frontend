@@ -2,7 +2,6 @@ import React from "react";
 import './Content.css';
 import AddingTodo from "./AddingTodo";
 const TodoList = ({todos, setTodos}) => {
-
     return(
         <div className="todo-container">
             <ul className="todo-list">
@@ -11,7 +10,7 @@ const TodoList = ({todos, setTodos}) => {
                     todo={todo}
                     setTodos={setTodos}
                     todos={todos}
-                    text={todo.text} 
+                    body={todo.body} 
                     key={todo.id}/>
                 ))}
             </ul>

@@ -1,6 +1,7 @@
-import React, {useState} from "react";
+import axios from "axios";
+import React from "react";
 
-const AddingTodo = ({text, todo, todos, setTodos}) =>{
+const AddingTodo = ({body, todo, todos, setTodos}) =>{
     //Events: Complete, delete todo,...
     const completeHandler = () => {
         setTodos(todos => todos.map(item => {
@@ -12,6 +13,13 @@ const AddingTodo = ({text, todo, todos, setTodos}) =>{
     }
 
     const deleteHandler = () => {
+        const removeData = (async() => {
+            const data = await axios.delete('http://172.20.30.139:8080/task/' + todo.id
+            )
+            .then(response => {
+                console.log(response);})
+        })
+        removeData();
         setTodos(todos => todos.filter((item) => item.id !== todo.id));
     }
     return(
@@ -19,7 +27,7 @@ const AddingTodo = ({text, todo, todos, setTodos}) =>{
             <button onClick={completeHandler} className="complete-btn">
                 <i className="fas fa-check"></i>
             </button>
-            <li className={`todo-item ${todo.completed ? "completed" : ""}`}>{text}</li>
+            <li className={`todo-item ${todo.completed ? "completed" : ""}`}>{body}</li>
             <button onClick={deleteHandler} className="trash-btn">
                 <i className="fas fa-trash"></i>
             </button>
