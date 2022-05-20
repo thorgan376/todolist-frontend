@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Content.css';
 import AddingTodo from "./AddingTodo";
-const TodoList = ({todos, setTodos}) => {
+const TodoList = ({todos, setTodos, filteredTodos}) => {
+
     return(
         <div className="todo-container">
             <ul className="todo-list">
-                {todos.map(todo => (
+                {filteredTodos.map(todo => (
                     <AddingTodo 
                     todo={todo}
                     setTodos={setTodos}

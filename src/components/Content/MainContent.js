@@ -11,24 +11,36 @@ function MainContent() {
     const [inputTodo, setInputTodo] = useState("");
     const [todos, setTodos] = useState([]);
     const [status, setStatus] = useState("All");
-
-    // const addTodo = (todo) => {
-    //     setTodos([...todos, todo]);
-    // }
+    const [filteredTodos, setFilteredTodos] = useState([]);
 
     useEffect( () => {
+        filterHandler();
+        console.log(filteredTodos);
+    },[todos, status])
+
+    useEffect(() => {
         const fetch = (async () => {
-            var data = await axios.get('http://172.20.30.139:8080/task', {
-                // headers = {
-                //     'Authorization': 'Basic '
-                // }
-            });
-            // setTodos(data);
-            console.log(data.data);
+            var data = await axios.get('http://localhost:8080/task');
             setTodos(data.data);
         })
-        fetch()
+        fetch();
     },[])
+
+    const filterHandler = () => {
+
+        switch(status) {
+            case 'completed':
+                setFilteredTodos(todos => todos.filter(todo => todo.checked === true));
+                break;
+            case 'uncompleted':
+                setFilteredTodos(todos => todos.filter(todo => todo.checked === false));
+                break;
+            default:
+                console.log(3, filteredTodos);
+                setFilteredTodos(todos);
+                break;
+        }
+    }
     return (
         <div className="agenda_view">
             <header className='view_header'>
@@ -46,9 +58,11 @@ function MainContent() {
                 setTodos={setTodos}
                 status={status}
                 setStatus={setStatus}/>
+                
             <TodoList 
                 setTodos={setTodos}
-                todos={todos}/>
+                todos={todos}
+                filteredTodos={filteredTodos}/>
         </div>
       );
     }

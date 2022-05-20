@@ -6,7 +6,7 @@ const AddingTodo = ({body, todo, todos, setTodos}) =>{
     const completeHandler = () => {
         setTodos(todos => todos.map(item => {
             if(item.id === todo.id){
-                return {...item, completed: !todo.completed};
+                return {...item, checked: !todo.checked};
             }
             return item;
         }));
@@ -14,10 +14,11 @@ const AddingTodo = ({body, todo, todos, setTodos}) =>{
 
     const deleteHandler = () => {
         const removeData = (async() => {
-            const data = await axios.delete('http://172.20.30.139:8080/task/' + todo.id
+            const data = await axios.delete('http://localhost:8080/task/' + todo.id
             )
             .then(response => {
-                console.log(response);})
+                console.log(response);
+                })
         })
         removeData();
         setTodos(todos => todos.filter((item) => item.id !== todo.id));
@@ -27,7 +28,7 @@ const AddingTodo = ({body, todo, todos, setTodos}) =>{
             <button onClick={completeHandler} className="complete-btn">
                 <i className="fas fa-check"></i>
             </button>
-            <li className={`todo-item ${todo.completed ? "completed" : ""}`}>{body}</li>
+            <li className={`todo-item ${todo.checked ? "checked" : ""}`}>{body}</li>
             <button onClick={deleteHandler} className="trash-btn">
                 <i className="fas fa-trash"></i>
             </button>

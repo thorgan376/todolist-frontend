@@ -19,11 +19,11 @@ const Form = ({inputTodo, setInputTodo, setTodos, todos, status, setStatus}) => 
         // setInputTodo("");
 
         const fetch = (async() => {
-            const data = await axios.post('http://172.20.30.139:8080/task', {
+            const resp = await axios.post('http://localhost:8080/task/', {
                 title: inputTodo,
                 body: inputTodo
             })
-            setTodos([...todos, data.data]);
+            setTodos([...todos, resp.data]);
             setInputTodo("");
         })
         fetch();
