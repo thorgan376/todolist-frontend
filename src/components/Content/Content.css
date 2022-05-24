@@ -159,7 +159,13 @@ textarea:focus, input:focus{
   background-color: #ff9933;
 }
 .complete-btn {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   background: rgb(11, 212, 162);
+}
+.trash-btn{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .todo-item {
   padding: 0rem 0.5rem;
