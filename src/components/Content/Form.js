@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 // import data from "./data.json";
 // data.todoist: chỉ import đúng một cái,
 // data: import hết những thứ trong file json
@@ -7,6 +7,7 @@ import axios from 'axios';
 
 const Form = ({inputTodo, setInputTodo, setTodos, todos, status, setStatus}) => {
     //Javascript Code And Function here
+    const [checked, setChecked] = useState(false);
     const textHandler = (event) => {
         // console.log(event.target.value);
         setInputTodo(event.target.value);
@@ -21,7 +22,8 @@ const Form = ({inputTodo, setInputTodo, setTodos, todos, status, setStatus}) => 
         const fetch = (async() => {
             const resp = await axios.post('http://localhost:8080/task/', {
                 title: inputTodo,
-                body: inputTodo
+                body: inputTodo,
+                checked: false
             })
             setTodos([...todos, resp.data]);
             setInputTodo("");

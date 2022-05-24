@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import './Content.css';
 import AddingTodo from "./AddingTodo";
-const TodoList = ({todos, setTodos, filteredTodos}) => {
+const TodoList = ({todos, setTodos, filteredTodos, setCheckedFilter}) => {
 
     return(
         <div className="todo-container">
@@ -12,7 +12,8 @@ const TodoList = ({todos, setTodos, filteredTodos}) => {
                     setTodos={setTodos}
                     todos={todos}
                     body={todo.body} 
-                    key={todo.id}/>
+                    key={todo.id}
+                    setCheckedFilter={setCheckedFilter}/>
                 ))}
             </ul>
         </div>

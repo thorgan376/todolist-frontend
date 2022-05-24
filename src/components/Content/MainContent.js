@@ -12,35 +12,37 @@ function MainContent() {
     const [todos, setTodos] = useState([]);
     const [status, setStatus] = useState("All");
     const [filteredTodos, setFilteredTodos] = useState([]);
-
-    useEffect( () => {
-        filterHandler();
-        console.log(filteredTodos);
-    },[todos, status])
+    const [checkedFilter, setCheckedFilter] = useState();
 
     useEffect(() => {
         const fetch = (async () => {
             var data = await axios.get('http://localhost:8080/task');
             setTodos(data.data);
+            setFilteredTodos(data.data);
         })
         fetch();
     },[])
-
+    
+    useEffect(() => {
+        filterHandler();
+    },[todos, status])
+    
     const filterHandler = () => {
-
         switch(status) {
             case 'completed':
-                setFilteredTodos(todos => todos.filter(todo => todo.checked === true));
+                const completed = todos.filter(todo => todo.checked === true)
+                setFilteredTodos(completed);
                 break;
             case 'uncompleted':
-                setFilteredTodos(todos => todos.filter(todo => todo.checked === false));
+                const uncompleted = todos.filter(todo => todo.checked === false)
+                setFilteredTodos(uncompleted);
                 break;
             default:
-                console.log(3, filteredTodos);
                 setFilteredTodos(todos);
                 break;
         }
     }
+
     return (
         <div className="agenda_view">
             <header className='view_header'>
@@ -62,7 +64,8 @@ function MainContent() {
             <TodoList 
                 setTodos={setTodos}
                 todos={todos}
-                filteredTodos={filteredTodos}/>
+                filteredTodos={filteredTodos}
+                setCheckedFilter={setCheckedFilter}/>
         </div>
       );
     }

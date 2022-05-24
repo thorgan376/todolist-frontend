@@ -146,13 +146,17 @@ textarea:focus, input:focus{
 }
 
 .trash-btn,
-.complete-btn {
+.complete-btn,
+.edit-btn {
   background: #DB4C3F;
   color: white;
   border: none;
   padding: 1rem;
   cursor: pointer;
   font-size: 1rem;
+}
+.edit-btn{
+  background-color: #ff9933;
 }
 .complete-btn {
   background: rgb(11, 212, 162);
@@ -162,7 +166,8 @@ textarea:focus, input:focus{
 }
 
 .fa-trash,
-.fa-check {
+.fa-check,
+.fa-edit {
   pointer-events: none;
 }
 
@@ -173,7 +178,7 @@ textarea:focus, input:focus{
 
 .checked {
   text-decoration: line-through;
-  opacity: 0.5;
+  color: #808080;
 }
 
 /*CUSTOM SELECTOR */
@@ -194,6 +199,7 @@ select {
   position: relative;
   overflow: hidden;
   color: white;
+  border-radius: 5px;
 }
 select {
   color: #DB4C3F;
@@ -212,9 +218,9 @@ select {
   cursor: pointer;
   pointer-events: none;
 }
-/* Transition */
-/*
-.select:hover::after {
-  transform: scale(1.5);
-}
-*/
+
+
+/* .select:hover::after {
+  transform: rotate(180deg);
+  transition: transform 2s;
+} */
