@@ -3,7 +3,7 @@ import './Content.css';
 import AddingTodo from "./AddingTodo";
 const TodoList = ({todos, setTodos, filteredTodos, setCheckedFilter}) => {
 
-    return(
+    return (
         <div className="todo-container">
             <ul className="todo-list">
                 {filteredTodos.map(todo => (

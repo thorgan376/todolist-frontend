@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 // import data from "./data.json";
 // data.todoist: chỉ import đúng một cái,
 // data: import hết những thứ trong file json
@@ -13,6 +13,7 @@ function MainContent() {
     const [status, setStatus] = useState("All");
     const [filteredTodos, setFilteredTodos] = useState([]);
     const [checkedFilter, setCheckedFilter] = useState();
+
 
     useEffect(() => {
         const fetch = (async () => {
@@ -48,26 +49,26 @@ function MainContent() {
             <header className='view_header'>
                 <div className='view_header__content'>
                     <h1>
-                      <span className='simple_title_today'>Today</span>
-                      <small className='simple_title_date'>{new Date().toDateString() + ''}</small>
+                        <span className='simple_title_today'>Today</span>
+                        <small className='simple_title_date'>{new Date().toDateString() + ''}</small>
                     </h1>
                 </div>
             </header>
             <Form
-                inputTodo={inputTodo} 
+                inputTodo={inputTodo}
                 setInputTodo={setInputTodo}
                 todos={todos}
                 setTodos={setTodos}
                 status={status}
-                setStatus={setStatus}/>
-                
-            <TodoList 
+                setStatus={setStatus} />
+
+            <TodoList
                 setTodos={setTodos}
                 todos={todos}
                 filteredTodos={filteredTodos}
                 setCheckedFilter={setCheckedFilter}/>
         </div>
-      );
-    }
-  
+    );
+}
+
 export default MainContent;
